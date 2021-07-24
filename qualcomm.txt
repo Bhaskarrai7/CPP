@@ -1,0 +1,72 @@
+//here I'll be writing some interview questions asked in qualcomm
+
+
+#1.Code snippet to dynamically alloacte 1D and 2D arrays
+
+{{{{{{{{okay so one thing 
+malloc function assings garbage values to the memory location and returns a void type pointer 
+which can be typecasted.
+ptr = (cast-type*) malloc(byte-size)
+
+“calloc” or “contiguous allocation” method in C is used to dynamically allocate the specified
+number of blocks of memory of the specified type. It initializes each block with a default value ‘0’.
+ptr = (cast-type*)calloc(n, element-size);
+
+“realloc” or “re-allocation” method in C is used to dynamically change the memory allocation of 
+a previously allocated memory. In other words, if the memory previously allocated with the help of 
+malloc or calloc is insufficient, realloc can be used to dynamically re-allocate memory.
+ re-allocation of memory maintains the already present value and new blocks will be initialized 
+ with default garbage value.
+
+Syntax:
+
+ptr = realloc(ptr, newSize);
+where ptr is reallocated with new size 'newSize'.}}}}}}}}}}
+
+so,=====>
+1_d
+int * arr = (int*)malloc(n * sizeof(int));
+
+for 2D=======>
+//rows allocated
+int **arr = malloc(n*sizeof(int*);
+
+for(int i =0;i<n;i++)
+ arr[i]=(int*)malloc(n*sizeof(int));
+
+
+for more doubts you can visit 
+https://aticleworld.com/dynamically-allocate-2d-array-c/
+
+same above thing with a cpp Code
+1_d
+    //                 cout<< "little endian";}
+    // dynamically allocate memory of size `N`
+    int* A = new int[N];
+2_d
+    // dynamically allocate memory of size `M × N`
+    int* A = new int[M * N];
+
+  
+------------------------------------------------------------------------------------------------------
+
+
+#2.heap vs stack memory allocation
+https://www.geeksforgeeks.org/stack-vs-heap-memory-allocation/
+
+------------------------------------------------------------------------------------------------------
+#3.
+--->The translator which performs macro calls expansion is called Macro 
+pre - processor.
+
+--->A Macro processor is a program that copies a stream of text from one place
+ to another, making a systematic set of replacements as it does so.
+
+--->A Dynamic linker is the part of an operating system that loads and links 
+the shared libraries.
+
+--->The C preprocessor is a micro processor that is used by compiler to 
+transform your code before compilation. It is called micro pre-processor 
+because it allows us to add macros.
+
+------------------------------------------------------------------------------------------------------
